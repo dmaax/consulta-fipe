@@ -9,8 +9,8 @@
 
 ## Antes de rodar
 
-- **Instalar lxml ** `pip install lxml`
-- **Instalar openpyxl ** `pip install openpyxl`
+- **Instalar lxml** `pip install lxml`
+- **Instalar openpyxl** `pip install openpyxl`
 
 ## Rodando
 
