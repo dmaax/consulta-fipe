@@ -14,4 +14,4 @@
 
 ## Rodando
 
-- **python3 consulta_fipe.py**
+- `python3 consulta_fipe.py`
