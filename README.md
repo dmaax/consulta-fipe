@@ -7,6 +7,12 @@
 
 <hr />
 
+## Criando um ambiente virtual
+```
+python3 -m venv env
+source env/bin/activate
+```
+
 ## Instalando dependências
 
 `pip install -r requirements.txt`
