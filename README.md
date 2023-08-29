@@ -7,10 +7,9 @@
 
 <hr />
 
-## Antes de rodar
+## Instalando dependências
 
-- **Instalar lxml** `pip install lxml`
-- **Instalar openpyxl** `pip install openpyxl`
+`pip install -r requirements.txt`
 
 ## Rodando
 
