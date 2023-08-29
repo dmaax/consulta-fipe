@@ -2,3 +2,6 @@ fipe.py
 output.xlsx
 rws.py
 veiculo_*.xlsx
+
+# Python venv
+env
