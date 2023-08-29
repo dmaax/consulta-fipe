@@ -1,3 +1,4 @@
+import cloudscraper
 import lxml.html as lh
 import requests
 import pandas as pd
@@ -7,12 +8,11 @@ try:
 except KeyboardInterrupt:
     print('\nFechando o prgrama (CTRL+C)')
     exit()
-    
-url = f'https://www.keplaca.com/placa/{placa}'
 
-r = requests.get(url)
-doc = lh.fromstring(r.content)
+scraper = cloudscraper.create_scraper()
+response = scraper.get(f"https://www.keplaca.com/placa/{placa}").text
 
+doc = lh.fromstring(response)
 tr_elements = doc.xpath('//table[@class="fipe-desktop"]//tr')
 
 col=[]
@@ -57,6 +57,7 @@ df=pd.DataFrame(Dict)
 print(df)
 
 writer = pd.ExcelWriter(f'veiculo_{placa}.xlsx')
-df.to_excel(writer)
+df.to_excel(writer, index=False)
 
-writer.save()
+writer.book.save(f'veiculo_{placa}.xlsx')
+writer.close()
